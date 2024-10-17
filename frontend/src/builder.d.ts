@@ -1,7 +1,9 @@
 declare type StyleValue = string | number | null | undefined;
 
+declare type styleProperty = keyof CSSProperties;
+
 declare interface BlockStyleMap {
-	[key: string]: StyleValue;
+	[key: styleProperty]: StyleValue;
 }
 
 declare interface BlockAttributeMap {
@@ -66,7 +68,7 @@ declare type HashString = `#${string}`;
 
 declare type RGBString = `rgb(${number}, ${number}, ${number})`;
 
-declare type LeftSidebarTabOption = "Blocks" | "Layers" | "Assets";
+declare type LeftSidebarTabOption = "Blocks" | "Layers" | "Assets" | "Code";
 declare type RightSidebarTabOption = "Properties" | "Script" | "Options";
 
 declare type BuilderMode = "select" | "text" | "container" | "image" | "repeater" | "move";
